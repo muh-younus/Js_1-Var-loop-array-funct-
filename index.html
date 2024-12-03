@@ -152,18 +152,117 @@
 
 //Factory Function
 
-function product( name, rate) {
+// function product( name, rate) {
 
-    return{
+//     return{
 
-        product_name : name,
-        price : rate,
+//         product_name : name,
+//         price : rate,
         
-    }
+//     }
+// }
+
+// ;
+// console.log(product("Aroma", 33))
+
+// CONSTRUCTOR FUNCTION
+// function lecture(name,author){
+
+//     this.name = name,
+//     this.author = author
+//     this.enroll = function(){
+
+//         console.log("Hello Javascript");
+//     }
+// }
+
+// // object
+
+// var course =  new lecture("Muhammad" , "shazaib");
+// course.price = 23;
+
+// console.log(course);
+// course.enroll();
+
+// course.newfunct=function(){
+
+//     console.log("New Function added");
+// }
+
+// console.log(course);
+// course.newfunct();
+
+// 
+
+// class
+
+// 
+
+let array = [
+
+{
+
+    Name: "Mahesh",
+    like: 300,
+    share: 12
+},
+{
+
+    Name: "Bura",
+    like: 400,
+    share: 34
+},
+{
+
+    Name: "Atish",
+    like: 600,
+    share: 78
+
 }
 
-;
-console.log(product("Aroma", 33))
+];
+
+// Inline callback function
+
+console.log(array.find(function(element){
+
+    return element.like ===300;
+}))
+
+// Arrow Function
+
+console.log(array.find((value) =>{
+     return value.share === 78;
+}))
+
+console.log(array.find(element => element.Name==="Mahesh"));
+
+
+let boy = ["N", "h", "J", "I"];
+let girl = ["P", "u", "hr"];
+
+let co = boy.concat(girl);
+console.log("The new aray is: " + co.slice(2,3));
+
+// co.forEach(function(name,index){
+
+//     console.log(name);
+
+
+// })
+
+co.forEach((value) => {
+
+    console.log(value);
+
+})
+
+
+
+    
+
+
+
 
 
     </script>
