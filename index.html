@@ -208,7 +208,7 @@ let array = [
 },
 {
 
-    Name: "Bura",
+    Name: "Atish",
     like: 400,
     share: 34
 },
@@ -222,46 +222,62 @@ let array = [
 
 ];
 
-// Inline callback function
+//Array Map
 
-console.log(array.find(function(element){
+const value = array.map((show) => {
 
-    return element.like ===300;
-}))
-
-// Arrow Function
-
-console.log(array.find((value) =>{
-     return value.share === 78;
-}))
-
-console.log(array.find(element => element.Name==="Mahesh"));
-
-
-let boy = ["N", "h", "J", "I"];
-let girl = ["P", "u", "hr"];
-
-let co = boy.concat(girl);
-console.log("The new aray is: " + co.slice(2,3));
-
-// co.forEach(function(name,index){
-
-//     console.log(name);
-
-
-// })
-
-co.forEach((value) => {
-
-    console.log(value);
-
+    return show.Name;
 })
 
+console.log(value);
+
+const store = array.map(disp =>  disp.like)
+console.log(store);
+
+var obj = array.map((pair) =>{
+
+    return{
+
+        Name: pair.Name,
+        share: pair.share,
+    }
+})
+
+console.log(obj);
+
+let total = array.reduce((prevLike, character) => {
+
+    return Number(prevLike) + Number(character.like);
+},0)
+
+console.log(`The total like is: ${total}`);
+
+//Get character share greater than 50
+//filter function
+const greaterValue = array.filter((value)=>{
+
+    return value.Name  == "Atish"
+})
+
+console.log(greaterValue);
 
 
-    
+//sorting by Name
 
+const sorted = array.sort((value1 , value2) =>{
 
+    if(value1.Name < value2.Name){
+
+        return -1;
+    }
+
+    if(value1.Name > value2.Name){
+
+        return 1;
+    }
+})
+
+console.log(sorted);
 
 
 
