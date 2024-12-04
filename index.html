@@ -198,86 +198,158 @@
 
 // 
 
-let array = [
+// let array = [
 
-{
+// {
 
-    Name: "Mahesh",
-    like: 300,
-    share: 12
-},
-{
+//     Name: "Mahesh",
+//     like: 300,
+//     share: 12
+// },
+// {
 
-    Name: "Atish",
-    like: 400,
-    share: 34
-},
-{
+//     Name: "Atish",
+//     like: 400,
+//     share: 34
+// },
+// {
 
-    Name: "Atish",
-    like: 600,
-    share: 78
+//     Name: "Atish",
+//     like: 600,
+//     share: 78
 
-}
+// }
 
-];
+// ];
 
-//Array Map
+// //Array Map
 
-const value = array.map((show) => {
+// const value = array.map((show) => {
 
-    return show.Name;
-})
+//     return show.Name;
+// })
 
-console.log(value);
+// console.log(value);
 
-const store = array.map(disp =>  disp.like)
-console.log(store);
+// const store = array.map(disp =>  disp.like)
+// console.log(store);
 
-var obj = array.map((pair) =>{
+// var obj = array.map((pair) =>{
 
-    return{
+//     return{
 
-        Name: pair.Name,
-        share: pair.share,
+//         Name: pair.Name,
+//         share: pair.share,
+//     }
+// })
+
+// console.log(obj);
+
+// let total = array.reduce((prevLike, character) => {
+
+//     return Number(prevLike) + Number(character.like);
+// },0)
+
+// console.log(`The total like is: ${total}`);
+
+// //Get character share greater than 50
+// //filter function
+// const greaterValue = array.filter((value)=>{
+
+//     return value.Name  == "Atish"
+// })
+
+// console.log(greaterValue);
+
+
+// //sorting by Name
+
+// const sorted = array.sort((value1 , value2) =>{
+
+//     if(value1.Name < value2.Name){
+
+//         return -1;
+//     }
+
+//     if(value1.Name > value2.Name){
+
+//         return 1;
+//     }
+// })
+
+// console.log(sorted);
+
+//Square Function
+
+const object = {
+
+    side : 5,
+    get area(){
+
+        return this.side ** 5;
     }
-})
-
-console.log(obj);
-
-let total = array.reduce((prevLike, character) => {
-
-    return Number(prevLike) + Number(character.like);
-},0)
-
-console.log(`The total like is: ${total}`);
-
-//Get character share greater than 50
-//filter function
-const greaterValue = array.filter((value)=>{
-
-    return value.Name  == "Atish"
-})
-
-console.log(greaterValue);
 
 
-//sorting by Name
+    };
 
-const sorted = array.sort((value1 , value2) =>{
+    //console.log(object.area);
 
-    if(value1.Name < value2.Name){
+    //Seperator Operator
 
-        return -1;
+    function stringConcat(seperator, ...strings){
+
+        let value1 = '';
+
+        strings.forEach((value, i) => {
+            
+
+            if(i  <= value.length-1){
+
+                value1 += seperator + value;
+            }
+            else{
+                value1 = value;
+            }
+        })
+
+        return value1;
+
+        
+
+
     }
 
-    if(value1.Name > value2.Name){
+   // console.log(stringConcat('^', 'this', 'is ','Ali'));
 
-        return 1;
+   let [First,second,thired,...other] = [1, 2, 3, 4, 5, 6];
+   console.log(other);
+
+   //Matchstick
+
+   function house(house){
+
+    if(house <= 0){
+        return 0;
     }
-})
 
-console.log(sorted);
+    let total_matchstick = house * 6;
+    let remaining = house *6 - (house -1);
+    return {total_matchstick,remaining};
+   }
+
+   let result = house(10);
+   let result1 = house(5);
+   let result2 = house(15);
+
+   console.log(`The total matchstick are: ${result.total_matchstick}`);
+   console.log(`The  use matchstick  are: ${result.remaining}`);
+
+
+    
+
+    
+
+
 
 
 
